@@ -5,24 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>文字反転ツール</title>
     <style>
+        @font-face {
+            font-family: 'AzukiFont';
+            src: url('fonts/azuki.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'AzukiFont', sans-serif;
             text-align: center;
             padding: 20px;
         }
+
         textarea {
             width: 80%;
             height: 100px;
             margin: 10px 0;
+            font-family: 'AzukiFont', sans-serif;
+            font-size: 16px;
         }
+
         button {
             padding: 10px 20px;
             font-size: 16px;
+            font-family: 'AzukiFont', sans-serif;
         }
+
         .result {
             margin-top: 20px;
             font-size: 18px;
             color: #333;
+            word-wrap: break-word;
         }
     </style>
 </head>
@@ -35,8 +49,15 @@
     <script>
         function reverseText() {
             var input = document.getElementById('inputText').value;
-            var reversed = input.split('').reverse().join('');
-            document.getElementById('outputText').innerText = reversed;
+
+            // 入力を反転
+            var reversed = Array.from(input).reverse().join('');
+
+            // エンティティとして表示
+            var wrapped = `&amp;#8238;${reversed}&amp;#8237;`;
+
+            // 結果を表示
+            document.getElementById('outputText').innerText = wrapped;
         }
     </script>
 </body>
