@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字反転ツール</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        textarea {
+            width: 80%;
+            height: 100px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>文字反転ツール</h1>
+    <textarea id="inputText" placeholder="ここに文字を入力してください"></textarea><br>
+    <button onclick="reverseText()">反転する</button>
+    <div class="result" id="outputText"></div>
+
+    <script>
+        function reverseText() {
+            var input = document.getElementById('inputText').value;
+            var reversed = input.split('').reverse().join('');
+            document.getElementById('outputText').innerText = reversed;
+        }
+    </script>
+</body>
+</html>
