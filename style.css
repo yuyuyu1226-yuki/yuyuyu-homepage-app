@@ -5,11 +5,15 @@
 
 body {
     font-family: 'AzukiFont', sans-serif;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 20px;
     background-color: #f8f8f8;
     color: #333;
+    text-align: center;
 }
 
 textarea {
