@@ -1,11 +1,50 @@
-body {
-  font-family: 'Azuki', sans-serif;
-  background-color: #ffc1e0;
-  text-align: center;
-  color: black;
+@font-face {
+    font-family: 'Azuki';
+    src: url('azuki.ttf') format('truetype');
 }
 
-h1, p {
-  margin: 0;
-  padding: 10px;
+body {
+    font-family: 'Azuki', sans-serif;
+    background-color: #ffc1e0;
+    text-align: center;
+    color: black;
+    margin: 0;
+}
+
+header, footer {
+    background-color: #cc9db2;
+    color: white;
+    padding: 10px 0;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    font-size: 0.9em;
 }
