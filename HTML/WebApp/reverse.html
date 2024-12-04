@@ -16,7 +16,7 @@
         function reverseText() {
             var input = document.getElementById('inputText').value;
             var reversed = Array.from(input).reverse().join('');
-            var wrapped = `&amp;#8238;${reversed}&amp;#8237;`;
+            var wrapped = `&#8238;${reversed}&#8237;`;
             document.getElementById('outputText').innerText = wrapped;
         }
     </script>
